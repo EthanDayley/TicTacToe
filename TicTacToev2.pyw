@@ -85,6 +85,8 @@ def Initialize():
     root.wait_visibility(root)
     root.wm_attributes('-alpha','0.7')
     root.wm_attributes('-fullscreen','true')
+    #Get screen width
+    screen_width = root.winfo_screenwidth()
     #title
     title = Label(root, bg='#222', fg='white', text='TicTacToe version 2.0', font=('Snas-Serif',50,'normal'))
     title.pack()
@@ -98,50 +100,50 @@ def Initialize():
     #A
     A=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     A.pack()
-    A.place(relx=0.4,rely=0.3, anchor=CENTER, width=166, height= 166)
+    A.place(relx=0.4,rely=0.3, anchor=CENTER, width=screen_width*0.087, height= screen_width*0.087)
     A.bind('<Button-1>', lambda event, pressedButton = A: Move(pressedButton, 0))
     
     #B
     B=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     B.pack()
-    B.place(relx=0.5,rely=0.3, anchor=CENTER, width=166, height= 166)
+    B.place(relx=0.5,rely=0.3, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     B.bind('<Button-1>', lambda event, pressedButton = B: Move(pressedButton, 1))
     #C
     C=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     C.pack()
-    C.place(relx=0.6,rely=0.3, anchor=CENTER, width=166, height= 166)
+    C.place(relx=0.6,rely=0.3, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     C.bind('<Button-1>', lambda event, pressedButton = C: Move(pressedButton, 2))
     #next line
     #D
     D=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     D.pack()
-    D.place(relx=0.4,rely=0.475, anchor=CENTER, width=166, height= 166)
+    D.place(relx=0.4,rely=0.475, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     D.bind('<Button-1>', lambda event, pressedButton = D: Move(pressedButton, 3))
     #E
     E=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     E.pack()
-    E.place(relx=0.5,rely=0.475, anchor=CENTER, width=166, height= 166)
+    E.place(relx=0.5,rely=0.475, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     E.bind('<Button-1>', lambda event, pressedButton = E: Move(pressedButton, 4))
     #F
     F=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     F.pack()
-    F.place(relx=0.6,rely=0.475, anchor=CENTER, width=166, height= 166)
+    F.place(relx=0.6,rely=0.475, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     F.bind('<Button-1>', lambda event, pressedButton = F: Move(pressedButton, 5))
     #next line
     #G
     G=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     G.pack()
-    G.place(relx=0.4,rely=0.651, anchor=CENTER, width=166, height= 166)
+    G.place(relx=0.4,rely=0.651, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     G.bind('<Button-1>', lambda event, pressedButton = G: Move(pressedButton, 6))
     #H
     H=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     H.pack()
-    H.place(relx=0.5,rely=0.651, anchor=CENTER, width=166, height= 166)
+    H.place(relx=0.5,rely=0.651, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     H.bind('<Button-1>', lambda event, pressedButton = H: Move(pressedButton, 7))
     #I
     I=Button(root, text='   ', fg='black', bg='white',font=('Sans-Serif',100,'bold'), cursor='hand2')
     I.pack()
-    I.place(relx=0.6,rely=0.651, anchor=CENTER, width=166, height= 166)
+    I.place(relx=0.6,rely=0.651, anchor=CENTER, width = screen_width*0.087, height = screen_width*0.087)
     I.bind('<Button-1>', lambda event, pressedButton = I: Move(pressedButton, 8))
     #mainloop
     root.mainloop()
